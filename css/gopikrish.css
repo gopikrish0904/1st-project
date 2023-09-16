@@ -1,0 +1,42 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(93, 93, 99);
+    padding: 11px;
+  
+  }
+  
+  header{
+    font-size: 25px;
+    background-color: aqua;
+    text-align: center;
+    padding: 0px;
+  
+  }
+  section{
+  
+    background-color: black;
+    color: aliceblue;
+    padding: 110px;
+  }
+  nav{
+    text-align: center;
+    font-style: italic;
+    background-color: rgb(212, 200, 200);
+    padding: 58px;
+    font-size: 71px;
+  }
+  article{
+    font-size: 12px;
+    background-attachment: green;
+    color: aqua;
+  }
+  aside{                            
+    font-size: small;
+    background-image: none;
+    color: blueviolet;
+  }
+  footer{
+    font-size: larger;
+    background-color: rgb(26, 96, 167);
+  }
+  
