@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiplication Table</title>
+</head>
+<body>
+    <h1>Multiplication Table</h1>
+    <p>Enter a positive integer:</p>
+    <input type="number" id="numberInput" />
+    <button onclick="printMultiplicationTable()">Generate Multiplication Table</button>
+    <p id="output"></p>
+
+    <script>
+        function printMultiplicationTable() {
+            const numberInput = document.getElementById("numberInput");
+            const output = document.getElementById("output");
+            output.textContent = ""; // Clear previous output
+
+            const n = parseInt(numberInput.value);
+
+            if (isNaN(n) || n <= 0) {
+                output.textContent = "Please enter a positive integer.";
+                return;
+            }
+
+            let table = "<h2>Multiplication Table for " + n + "</h2><table border='1'><tr><th>Multiplicand</th><th>Product</th></tr>";
+
+            for (let i = 1; i <= 10; i++) {
+                table += "<tr><td>" + n + " x " + i + "</td><td>" + (n * i) + "</td></tr>";
+            }
+
+            table += "</table>";
+            output.innerHTML = table;
+        }
+    </script>
+</body>
+</html>

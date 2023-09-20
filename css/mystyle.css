@@ -1,0 +1,27 @@
+
+p {
+    text-align: left;
+    color: red;
+    border:2px soild blue;
+  } 
+  
+  p {
+    text-align: left;
+    color: red;
+    border:2px solid blue;
+  } 
+  #para1{
+   text-align: right;
+    color: blue;
+    border:2px solid green;
+  }
+  .center {
+    text-align: left;
+    color: red;
+  }
+  .gopi{
+      text-align: right;
+    color: red;
+    border: 1px solid khaki;
+  }
+  

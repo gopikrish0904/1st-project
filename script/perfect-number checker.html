@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Perfect Number Checker</title>
+  <script>
+    function isPerfectNumber(number) {
+      if (number <= 0) {
+        return false;
+      }
+
+      let sumOfDivisors = 0;
+      for (let i = 1; i < number; i++) {
+        if (number % i === 0) {
+          sumOfDivisors += i;
+        }
+      }
+
+      return sumOfDivisors === number;
+    }
+
+    function checkPerfectNumber() {
+      const inputNumber = document.getElementById("numberInput").value;
+      const resultElement = document.getElementById("result");
+
+      if (isPerfectNumber(inputNumber)) {
+        resultElement.textContent = `${inputNumber} is a perfect number.`;
+      } else {
+        resultElement.textContent = `${inputNumber} is not a perfect number.`;
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Perfect Number Checker</h1>
+  <p>Enter a positive integer:</p>
+  <input type="number" id="numberInput">
+  <button onclick="checkPerfectNumber()">Check</button>
+  <p id="result"></p>
+</body>
+</html>

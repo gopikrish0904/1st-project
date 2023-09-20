@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="with=device-width,initia;-scale=1">
+<style>
+*{
+   box-sizing:border-box;
+} 
+body{font-family:arial, helvetica, sans-serif;
+}
+
+header {
+    background-color: #666;
+    padding:30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+}
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+article {
+    float: left;
+    padding:20px;
+    width: 70%;
+    background-color: #f1f1f1;
+    height: 300px;  
+}
+
+
+section::after {
+    content: "";
+    display: table;
+    clear: both;
+
+}
+
+
+footer {
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: white;
+
+}
+
+
+@media (max-width: 600px) {
+    nav,article {
+        width: 100%;
+        height: auto;
+
+    }
+}
+
+</style>    
+</head>    
+</html>
+
+<h2>CSS layout float</h2>
+<p> in this example,we have created a header, two columns/boxes and a footer.</p>
+<p>resize the browser window to see the responsive effect (you will learn more about
+this in our next chapter - HTML responsive.)</p>
+
+<header>
+    <h2>cities</h2>
+    </header>
+
+    <section>
+        <nav>
+            <u1>
+                <li><a href="#">london</a></a></li>
+                <li><a href="#">paris</a></li>
+                <li><a href="#">tokyo</a></li>
+                </u1>
+            </nav>
+
+            <article>
+                <h1>london</h1>
+                <p>london is the capital city of england. it is the most populous city in the
+                city in the united kingdom, width a metropolitan area of over 13 million 
+                inhabitants.</p>
+                <p>standing on the river thames,london has been a major settlement for
+            
+                    two</p>                
+                </article>
+
+        </section>
+
+        <footer>
+            <p>footer</p>
+        </footer>
+
+    </body>
+    </html>      
