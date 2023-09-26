@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Empty Object Example</title>
+</head>
+<body>
+    <script>
+        // Create an empty object called "person"
+        var person = {};
+        
+        // You can now add properties and values to this object as needed.
+        // For example:
+        person.name = "John";
+        person.age = 30;
+        person.job = "Engineer";
+        
+        // You can access the properties of the object:
+        console.log(person.name); // This will log "John" to the console
+         // Create an empty object called "person"
+         var person = {};
+        
+        // Add properties to the "person" object
+        person.name = "John";
+        person.age = 30;
+        person.city = "New York";
+        
+        // Access and display the properties
+        console.log("Name: " + person.name);
+        console.log("Age: " + person.age);
+        console.log("City: " + person.city);
+         // Create an object called "person" with properties
+         var person = {
+            name: "John",
+            age: 30,
+            city: "New York"
+        };
+
+        // Remove the "age" property from the "person" object
+        delete person.age;
+
+        // Access and display the remaining properties
+        console.log("Name: " + person.name);
+        console.log("City: " + person.city);
+        
+        // Attempt to access the removed property (age)
+        console.log("Age: " + person.age); // This will log "undefined" to the console
+         // Create an object called "person" with properties
+         var person = {
+            name: "John",
+            city: "New York"
+        };
+
+        // Add the "job" property to the "person" object
+        person.job = "Engineer";
+
+        // Access and display the properties
+        console.log("Name: " + person.name);
+        console.log("City: " + person.city);
+        console.log("Job: " + person.job); // This will log "Engineer" to the console
+         // Create an object called "person" with properties
+         var person = {
+            name: "John",
+            city: "New York",
+            job: "Engineer"
+        };
+
+        // Update the "city" property to "San Francisco"
+        person.city = "San Francisco";
+
+        // Access and display the properties
+        console.log("Name: " + person.name);
+        console.log("City: " + person.city); // This will now log "San Francisco" to the console
+        console.log("Job: " + person.job);
+         // Create an object called "person" with properties
+         var person = {
+            name: "John",
+            city: "New York",
+            job: "Engineer"
+        };
+
+        // Update the "city" property to "San Francisco"
+        person.city = "San Francisco";
+
+        // Add the "job" property with the value "Engineer"
+        person.job = "Engineer";
+
+        // Display the final "person" object
+        console.log(person);
+    </script>
+</body>
+</html>

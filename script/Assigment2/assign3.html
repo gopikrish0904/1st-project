@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Larger Number Finder</title>
+</head>
+<body>
+    <h1>Larger Number Finder</h1>
+    <p>Enter two numbers:</p>
+    <input type="number" id="number1Input" placeholder="Number 1">
+    <input type="number" id="number2Input" placeholder="Number 2">
+    <button onclick="findLargerNumber()">Find Larger Number</button>
+    <p id="result"></p>
+
+    <script>
+        function findLargerNumber() {
+            var num1 = parseFloat(document.getElementById("number1Input").value);
+            var num2 = parseFloat(document.getElementById("number2Input").value);
+
+            if (!isNaN(num1) && !isNaN(num2)) {
+                var largerNumber = num1 > num2 ? num1 : num2;
+                document.getElementById("result").innerText = "The larger number is: " + largerNumber;
+            } else {
+                document.getElementById("result").innerText = "Please enter valid numbers.";
+            }
+        }
+    </script>
+</body>
+</html>

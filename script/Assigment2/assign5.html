@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prime Number Finder</title>
+</head>
+<body>
+    <h1>Prime Number Finder</h1>
+    <p>Enter a positive integer:</p>
+    <input type="number" id="numberInput">
+    <button onclick="findPrimeNumbers()">Find Prime Numbers</button>
+    <p id="result"></p>
+
+    <script>
+        function isPrime(num) {
+            if (num <= 1) {
+                return false;
+            }
+            if (num <= 3) {
+                return true;
+            }
+            if (num % 2 === 0 || num % 3 === 0) {
+                return false;
+            }
+
+            for (var i = 5; i * i <= num; i += 6) {
+                if (num % i === 0 || num % (i + 2) === 0) {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        function findPrimeNumbers() {
+            var number = parseInt(document.getElementById("numberInput").value);
+            var primes = [];
+
+            for (var i = 2; i <= number; i++) {
+                if (isPrime(i)) {
+                    primes.push(i);
+                }
+            }
+
+            document.getElementById("result").innerText = "Prime numbers up to " + number + ": " + primes.join(", ");
+        }
+    </script>
+</body>
+</html>

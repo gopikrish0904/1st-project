@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Checker</title>
+</head>
+<body>
+    <h1>Number Checker</h1>
+    <p>Enter a number:</p>
+    <input type="number" id="numberInput">
+    <button onclick="checkNumber()">Check</button>
+    <p id="result"></p>
+
+    <script>
+        function checkNumber() {
+            // Get the input value
+            var number = parseFloat(document.getElementById("numberInput").value);
+
+            // Check if the number is positive, negative, or zero
+            if (number > 0) {
+                document.getElementById("result").innerText = "Positive";
+            } else if (number < 0) {
+                document.getElementById("result").innerText = "Negative";
+            } else {
+                document.getElementById("result").innerText = "Zero";
+            }
+        }
+    </script>
+</body>
+</html>

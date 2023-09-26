@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Names Viewer</title>
+    
+</head>
+
+<body>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #333;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#name-display {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+    </style>
+    
+    
+    <div class="container">
+        <h1>Indian Names</h1>
+        <div id="name-display">
+            <!-- Name will be displayed here -->
+        </div>
+        <div class="buttons">
+            <button id="previous-btn">Previous</button>
+            <button id="next-btn">Next</button>
+        </div>
+    </div>
+    <script>
+        const names = ["Aarav", "Sanya", "Vikram", "Neha", "Rohan", "Priya", "Amit", "Meera", "Rajiv", "Ananya"];
+let currentIndex = 0;
+const nameDisplay = document.getElementById("name-display");
+const nextButton = document.getElementById("next-btn");
+const previousButton = document.getElementById("previous-btn");
+
+function displayCurrentName() {
+    nameDisplay.textContent = names[currentIndex];
+}
+
+function nextName() {
+    currentIndex = (currentIndex + 1) % names.length;
+    displayCurrentName();
+}
+
+function previousName() {
+    currentIndex = (currentIndex - 1 + names.length) % names.length;
+    displayCurrentName();
+}
+
+nextButton.addEventListener("click", nextName);
+previousButton.addEventListener("click", previousName);
+
+// Initial display
+displayCurrentName();
+
+    </script>
+</body>
+</html>
